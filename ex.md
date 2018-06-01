@@ -147,5 +147,5 @@ gcc  XXX.o –o XXX.jpg
 -rwxrwxr-x 1 ksu ksu  8600  六   1 08:56 hello.jpg
 -rw-rw-r-- 1 ksu ksu  1504  六   1 09:00 hello.o
 -rw-rw-r-- 1 ksu ksu   455  六   1 08:50 hello.s
-#
-C程式成逆向檔
+
+#C程式成逆向檔
