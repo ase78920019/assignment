@@ -113,9 +113,8 @@ gcc –S XXX.i  –o XXX.s
 產生Intel語法格式的組語(微軟預設使用的格式)
 
 
-
-
-gcc -S -masm=intel XXXXX.c -o XXXXX_intel.s
+	gcc -S -masm=intel XXXXX.c -o XXXXX_intel.s
+	
 
 	.file	"hello.c"
 	.intel_syntax noprefix
@@ -144,11 +143,30 @@ gcc -S -masm=intel XXXXX.c -o XXXXX_intel.s
 	
 ![](https://github.com/ase78920019/assignment/blob/master/%E6%93%B7%E5%8F%967.PNG)
 	
-要去掉一堆註解:請加上參數-
+要去掉一堆註解:請加上參數-fno-asynchronous-unwind-tables
 組譯過程
 
 
-gcc –c XXX.s –o XXX.o
+	gcc -S -masm=intel XXXXX.c -o XXXXX_intel_OK.s -fno-asynchronous-unwind-tables
+		.file	"hello.c"
+		.intel_syntax noprefix
+		.section	.rodata
+	.LC0:
+		.string	"Hello CTFer"
+		.text
+		.globl	main
+		.type	main, @function
+	main:
+		push	rbp
+		mov	rbp, rsp
+		mov	edi, OFFSET FLAT:.LC0
+		call	puts
+		mov	eax, 0
+		pop	rbp
+		ret
+		.size	main, .-main
+		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
+		.section	.note.GNU-stack,"",@progbits
 
 將組合語言程式碼轉成機器可以執行的指令(instructions)
 每一個組語語句都對應一機器指令。
