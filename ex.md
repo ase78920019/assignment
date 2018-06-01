@@ -5,9 +5,11 @@ c語言程式編譯與組譯
 #C語言程式 xxx.c
 
 
-
+    
 int main()
-{   char a=176,b=219;
+{   
+
+    char a=176,b=219;
     
     printf("%c%c%c%c%c\n",b,a,a,a,b);
     
