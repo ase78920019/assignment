@@ -29,8 +29,7 @@ gcc –E XXX.c –o XXX.i
 編譯階段:產生組語
 gcc –S XXX.i  –o XXX.s
 產生的組合語言(assembly)
-
-
+預設是AT&T組合語言格式
 	.file	"hello.c"
 	.section	.rodata
 .LC0:
