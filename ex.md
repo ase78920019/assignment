@@ -3,11 +3,44 @@ c語言程式編譯與組譯與逆向
 c語言程式編譯與組譯
 
 #C語言程式
+ksu@ksu-VirtualBox:~$ gedit heio.c
+ksu@ksu-VirtualBox:~$ mv heio.c hello.c
+ksu@ksu-VirtualBox:~$ ls
+CTF_ex2018        hello.c              Pictures            Videos
+Desktop           juice-shop           Public              WebGoat
+Documents         juice-shop-Start.sh  Templates           WebGoatStart.sh
+Downloads         juice-shop-Stop.sh   uncompyle2          WebGoatStop.sh
+examples.desktop  Music                UserDatabase.mv.db
+ksu@ksu-VirtualBox:~$ cat hello.c 
 int main()
 {
    printf("Hello CTFer\n ”);
    return 0;
 }
+ksu@ksu-VirtualBox:~$ gedit helo.c
+ksu@ksu-VirtualBox:~$ mv heio.c hello.c
+mv: cannot stat 'heio.c': No such file or directory
+ksu@ksu-VirtualBox:~$ gedit helo.c
+ksu@ksu-VirtualBox:~$ mv helo.c xxx.c
+ksu@ksu-VirtualBox:~$ ls
+CTF_ex2018        hello.c              Pictures            Videos
+Desktop           juice-shop           Public              WebGoat
+Documents         juice-shop-Start.sh  Templates           WebGoatStart.sh
+Downloads         juice-shop-Stop.sh   uncompyle2          WebGoatStop.sh
+examples.desktop  Music                UserDatabase.mv.db  xxx.c
+ksu@ksu-VirtualBox:~$ cat xxx.c
+#include<stdio.h>
+int main()
+{
+    char a=176,b=219;
+    printf("%c%c%c%c%c\n",b,a,a,a,b);
+    printf("%c%c%c%c%c\n",a,b,a,b,a);
+    printf("%c%c%c%c%c\n",a,a,b,a,a);
+    printf("%c%c%c%c%c\n",a,b,a,b,a);
+    printf("%c%c%c%c%c\n",b,a,a,a,b);
+    return 0;
+}
+
 【推薦好書】程式設計師的自我修養：連結、載入、程式庫
 
 產生組語
@@ -22,11 +55,15 @@ gcc -S -masm=intel XXXXX.c -o XXXXX_intel.s
 
 gcc -S -masm=intel XXXXX.c -o XXXXX_intel_OK.s -fno-asynchronous-unwind-tables
 組譯過程
+gcc –c XXX.s –o XXX.o
 
 將組合語言程式碼轉成機器可以執行的指令(instructions)
 每一個組語語句都對應一機器指令。
+
 組譯器的組譯過程相對於編譯器來講比較簡單
+
 沒有複雜的語法，也沒有語意，也不需要做指令最佳化，只是根據組語指令和機器指令的對照表一一翻譯就可以
+
 連結過程
 gcc  XXX.o –o XXX
 gcc  XXX.o –o XXX.exe
