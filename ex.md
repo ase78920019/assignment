@@ -6,8 +6,8 @@ c語言程式編譯與組譯
 
 
     
-int main()
-{   
+	int main()
+	{   
 
     char a=176,b=219;
     
@@ -24,7 +24,7 @@ int main()
     return 0;
     
     
-}
+	}
 
 
 
