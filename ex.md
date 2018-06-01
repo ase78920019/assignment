@@ -83,8 +83,9 @@ gcc –S XXX.i  –o XXX.s
 
 
 
-gcc -S -masm=att XXXXX.c -o XXXXX_att.s
+	gcc -S -masm=att XXXXX.c -o XXXXX_att.s
 
+	
 
 	.file	"hello.c"
 	.section	
