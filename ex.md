@@ -80,33 +80,31 @@ gcc –S XXX.i  –o XXX.s
 產生AT&T語法格式的組語(gcc預設使用的格式)
 
 
+
 gcc -S -masm=att XXXXX.c -o XXXXX_att.s
+
+
 	.file	"hello.c"
-	.section	.rodata
-.LC0:
+	.section	
+	.rodata.LC0:
 	.string	"Hello CTFer"
 	.text
 	.globl	main
-	.type	main, @function
-main:
-.LFB0:
-	.cfi_startproc
-	pushq	%rbp
+	.type	main, @functionmain:.LFB0:
+	.cfi_startprocpushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movl	$.LC0, %edi
+	.cfi_offset 6, -16movq	%rsp, %rbp
+	.cfi_def_cfa_register 6movl	$.LC0, %edi
 	call	puts
 	movl	$0, %eax
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
-	.cfi_endproc
-.LFE0:
+	.cfi_endproc.LFE0:
 	.size	main, .-main
 	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
 	.section	.note.GNU-stack,"",@progbits
+	
 	
 	
 產生Intel語法格式的組語(微軟預設使用的格式)
@@ -115,14 +113,11 @@ main:
 gcc -S -masm=intel XXXXX.c -o XXXXX_intel.s
 	.file	"hello.c"
 	.intel_syntax noprefix
-	.section	.rodata
-.LC0:
+	.section	.rodata.LC0:
 	.string	"Hello CTFer"
 	.text
 	.globl	main
-	.type	main, @function
-main:
-.LFB0:
+	.type	main, @functionmain:.LFB0:
 	.cfi_startproc
 	push	rbp
 	.cfi_def_cfa_offset 16
@@ -135,8 +130,7 @@ main:
 	pop	rbp
 	.cfi_def_cfa 7, 8
 	ret
-	.cfi_endproc
-.LFE0:
+	.cfi_endproc.LFE0:
 	.size	main, .-main
 	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
 	.section	.note.GNU-stack,"",@progbits
@@ -159,14 +153,24 @@ gcc –c XXX.s –o XXX.o
 連結過程
 
 
+
 gcc  XXX.o –o XXX
+
 gcc  XXX.o –o XXX.exe
+
 gcc  XXX.o –o XXX.jpg
+
 -rw-rw-r-- 1 ksu ksu    76  六   1 08:27 hello.c
+
 -rw-rw-r-- 1 ksu ksu 17106  六   1 08:27 hello.i
+
 -rwxrwxr-x 1 ksu ksu  8600  六   1 08:56 hello.jpg
+
 -rw-rw-r-- 1 ksu ksu  1504  六   1 09:00 hello.o
+
 -rw-rw-r-- 1 ksu ksu   455  六   1 08:50 hello.s
+
+
 
 
 #C程式成逆向檔
