@@ -19,7 +19,14 @@ int main()
 
 【推薦好書】程式設計師的自我修養：連結、載入、程式庫
 
-預編譯階段:產生組語
+預處理階段
+gcc –E XXX.c –o XXX.i
+查看.i的架構==>hello.i
+
+![](https://github.com/ase78920019/assignment/blob/master/%E6%93%B7%E5%8F%968.PNG)
+
+
+編譯階段:產生組語
 gcc –S XXX.i  –o XXX.s
 產生的組合語言(assembly)
 
