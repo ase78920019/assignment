@@ -51,6 +51,8 @@ gcc –S XXX.i  –o XXX.s
 
 預設是AT&T組合語言格式
 
+	gcc -S -masm=att XXXXX.c -o XXXXX_att.s
+
 
 	.file	"hello.c"
 	.section	.rodata.LC0:
