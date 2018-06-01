@@ -110,7 +110,10 @@ gcc -S -masm=att XXXXX.c -o XXXXX_att.s
 產生Intel語法格式的組語(微軟預設使用的格式)
 
 
+
+
 gcc -S -masm=intel XXXXX.c -o XXXXX_intel.s
+
 	.file	"hello.c"
 	.intel_syntax noprefix
 	.section	.rodata.LC0:
@@ -135,6 +138,7 @@ gcc -S -masm=intel XXXXX.c -o XXXXX_intel.s
 	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
 	.section	.note.GNU-stack,"",@progbits
 	
+	
 ![](https://github.com/ase78920019/assignment/blob/master/%E6%93%B7%E5%8F%967.PNG)
 	
 要去掉一堆註解:請加上參數-
@@ -154,21 +158,14 @@ gcc –c XXX.s –o XXX.o
 
 
 
-gcc  XXX.o –o XXX
-
-gcc  XXX.o –o XXX.exe
-
-gcc  XXX.o –o XXX.jpg
-
--rw-rw-r-- 1 ksu ksu    76  六   1 08:27 hello.c
-
--rw-rw-r-- 1 ksu ksu 17106  六   1 08:27 hello.i
-
--rwxrwxr-x 1 ksu ksu  8600  六   1 08:56 hello.jpg
-
--rw-rw-r-- 1 ksu ksu  1504  六   1 09:00 hello.o
-
--rw-rw-r-- 1 ksu ksu   455  六   1 08:50 hello.s
+	gcc  XXX.o –o XXX
+	gcc  XXX.o –o XXX.exe
+	gcc  XXX.o –o XXX.jpg
+	-rw-rw-r-- 1 ksu ksu    76  六   1 08:27 hello.c
+	-rw-rw-r-- 1 ksu ksu 17106  六   1 08:27 hello.i
+	-rwxrwxr-x 1 ksu ksu  8600  六   1 08:56 hello.jpg
+	-rw-rw-r-- 1 ksu ksu  1504  六   1 09:00 hello.o
+	-rw-rw-r-- 1 ksu ksu   455  六   1 08:50 hello.s
 
 
 
