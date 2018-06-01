@@ -3,6 +3,8 @@ c語言程式編譯與組譯與逆向
 c語言程式編譯與組譯
 
 #C語言程式 xxx.c
+
+
 int main()
 {
     char a=176,b=219;
@@ -13,6 +15,8 @@ int main()
     printf("%c%c%c%c%c\n",b,a,a,a,b);
     return 0;
 }
+
+
 
 ![](https://github.com/ase78920019/assignment/blob/master/%E6%93%B7%E5%8F%966.PNG)
 
