@@ -27,35 +27,41 @@ gcc –E XXX.c –o XXX.i
 
 
 編譯階段:產生組語
+
+
 gcc –S XXX.i  –o XXX.s
+
+
 產生的組合語言(assembly)
+
+
 預設是AT&T組合語言格式
+
+
 	.file	"hello.c"
-	.section	.rodata
-.LC0:
+	.section	.rodata.LC0:
 	.string	"Hello CTFer"
 	.text
 	.globl	main
-	.type	main, @function
-main:
-.LFB0:
-	.cfi_startproc
-	pushq	%rbp
+	.type	main, @functionmain:
+	.LFB0:
+	.cfi_startprocpushq	%rbp
 	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movl	$.LC0, %edi
-	call	puts
-	movl	$0, %eax
+	.cfi_offset 6, -16movq	%rsp, %rbp
+	.cfi_def_cfa_register 6movl	
+	$.LC0, %edicall	puts movl	$0, %eax
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
 .LFE0:
+
+
 	.size	main, .-main
 	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
 	.section	.note.GNU-stack,"",@progbits
+	
+	
 	
 產生AT&T語法格式的組語(gcc預設使用的格式)
 
