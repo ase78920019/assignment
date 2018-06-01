@@ -108,6 +108,8 @@ main:
 	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
 	.section	.note.GNU-stack,"",@progbits
 	
+![](https://github.com/ase78920019/assignment/blob/master/%E6%93%B7%E5%8F%967.PNG)
+	
 要去掉一堆註解:請加上參數-
 組譯過程
 gcc –c XXX.s –o XXX.o
