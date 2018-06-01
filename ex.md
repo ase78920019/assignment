@@ -30,8 +30,6 @@ gcc –E XXX.c –o XXX.i
 gcc –S XXX.i  –o XXX.s
 產生的組合語言(assembly)
 
-預設是AT&T組合語言格式
-
 
 	.file	"hello.c"
 	.section	.rodata
@@ -59,7 +57,6 @@ main:
 	.size	main, .-main
 	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
 	.section	.note.GNU-stack,"",@progbits
-	
 	
 產生AT&T語法格式的組語(gcc預設使用的格式)
 
