@@ -15,6 +15,7 @@ int main()
 }
 ![](https://github.com/ase78920019/assignment/blob/master/%E6%93%B7%E5%8F%966.PNG)
 
+
 【推薦好書】程式設計師的自我修養：連結、載入、程式庫
 
 預編譯階段:產生組語
@@ -106,28 +107,7 @@ main:
 	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
 	.section	.note.GNU-stack,"",@progbits
 	
-要去掉一堆註解:請加上參數-fno-asynchronous-unwind-tables
-gcc -S -masm=intel XXXXX.c -o XXXXX_intel_OK.s -fno-asynchronous-unwind-tables
-	.file	"hello.c"
-	.intel_syntax noprefix
-	.section	.rodata
-.LC0:
-	.string	"Hello CTFer"
-	.text
-	.globl	main
-	.type	main, @function
-main:
-	push	rbp
-	mov	rbp, rsp
-	mov	edi, OFFSET FLAT:.LC0
-	call	puts
-	mov	eax, 0
-	pop	rbp
-	ret
-	.size	main, .-main
-	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
-	.section	.note.GNU-stack,"",@progbits
-	
+要去掉一堆註解:請加上參數-
 組譯過程
 gcc –c XXX.s –o XXX.o
 
