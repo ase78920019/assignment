@@ -13,6 +13,7 @@ int main()
     printf("%c%c%c%c%c\n",b,a,a,a,b);
     return 0;
 }
+![](https://github.com/ase78920019/assignment/blob/master/%E6%93%B7%E5%8F%966.PNG)
 
 【推薦好書】程式設計師的自我修養：連結、載入、程式庫
 
