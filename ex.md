@@ -2,34 +2,7 @@ c語言程式編譯與組譯與逆向
 
 c語言程式編譯與組譯
 
-#C語言程式
-ksu@ksu-VirtualBox:~$ gedit heio.c
-ksu@ksu-VirtualBox:~$ mv heio.c hello.c
-ksu@ksu-VirtualBox:~$ ls
-CTF_ex2018        hello.c              Pictures            Videos
-Desktop           juice-shop           Public              WebGoat
-Documents         juice-shop-Start.sh  Templates           WebGoatStart.sh
-Downloads         juice-shop-Stop.sh   uncompyle2          WebGoatStop.sh
-examples.desktop  Music                UserDatabase.mv.db
-ksu@ksu-VirtualBox:~$ cat hello.c 
-int main()
-{
-   printf("Hello CTFer\n ”);
-   return 0;
-}
-ksu@ksu-VirtualBox:~$ gedit helo.c
-ksu@ksu-VirtualBox:~$ mv heio.c hello.c
-mv: cannot stat 'heio.c': No such file or directory
-ksu@ksu-VirtualBox:~$ gedit helo.c
-ksu@ksu-VirtualBox:~$ mv helo.c xxx.c
-ksu@ksu-VirtualBox:~$ ls
-CTF_ex2018        hello.c              Pictures            Videos
-Desktop           juice-shop           Public              WebGoat
-Documents         juice-shop-Start.sh  Templates           WebGoatStart.sh
-Downloads         juice-shop-Stop.sh   uncompyle2          WebGoatStop.sh
-examples.desktop  Music                UserDatabase.mv.db  xxx.c
-ksu@ksu-VirtualBox:~$ cat xxx.c
-#include<stdio.h>
+#C語言程式 xxx.c
 int main()
 {
     char a=176,b=219;
@@ -43,8 +16,40 @@ int main()
 
 【推薦好書】程式設計師的自我修養：連結、載入、程式庫
 
-產生組語
+預處理階段
+gcc –E XXX.c –o XXX.i
 
+查看.i的架構==>hello.i
+
+產生的組合語言(assembly)
+
+預設是AT&T組合語言格式
+	.file	"hello.c"
+	.section	.rodata
+.LC0:
+	.string	"Hello CTFer"
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$.LC0, %edi
+	call	puts
+	movl	$0, %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
+	.section	.note.GNU-stack,"",@progbits
 產生AT&T語法格式的組語(gcc預設使用的格式)
 
 gcc -S -masm=att XXXXX.c -o XXXXX_att.s
