@@ -28,7 +28,7 @@ c語言程式編譯與組譯
 
 
 
-![](https://github.com/ase78920019/assignment/blob/master/%E6%93%B7%E5%8F%966.PNG)
+![](https://github.com/ase78920019/assignment/blob/master/picture/c%20language%20reverse%201.PNG)
 
 
 【推薦好書】程式設計師的自我修養：連結、載入、程式庫
@@ -37,7 +37,7 @@ c語言程式編譯與組譯
 gcc –E XXX.c –o XXX.i
 查看.i的架構==>hello.i
 
-![](https://github.com/ase78920019/assignment/blob/master/%E6%93%B7%E5%8F%968.PNG)
+![](https://github.com/ase78920019/assignment/blob/master/picture/c%20language%20reverse%202.PNG)
 
 
 編譯階段:產生組語
@@ -141,7 +141,7 @@ gcc –S XXX.i  –o XXX.s
 	.section	.note.GNU-stack,"",@progbits
 	
 	
-![](https://github.com/ase78920019/assignment/blob/master/%E6%93%B7%E5%8F%967.PNG)
+![](https://github.com/ase78920019/assignment/blob/master/picture/c%20language%20reverse%203.PNG)
 	
 要去掉一堆註解:請加上參數-fno-asynchronous-unwind-tables
 
