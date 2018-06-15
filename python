@@ -671,3 +671,6 @@ if __name__ == '__main__': #如果模塊是直接被執行，則執行函式，�
     fp = open('test.txt','r')#打開test.txt可讀
     print fp.read() #印出test.txt
     fp.close() #關閉test.txt
+
+
+![](https://github.com/ase78920019/assignment/blob/master/picture/1.PNG)
