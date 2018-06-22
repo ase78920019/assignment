@@ -9,7 +9,6 @@ step4: ls 找到flag(文件檔)
 
 step5: cat flag
 
-yourdearstudenthomework
 
 Linux CTF2
 step1: pwd (找到自己的絕對路徑)
@@ -22,7 +21,7 @@ step4: file .hiidden(發現是文件檔)
 
 step5: cat .hidden
 
-yourdearstudenthomework
+
 
 Linux CTF3
 step1: cat hex.txt
@@ -31,7 +30,6 @@ step2: 發現是16進位
 
 step3: xxd -r -p hex.txt (16進位轉字串)
 
-yourdearstudenthomework
 
 Linux CTF4
 step1: cat base64.txt
@@ -40,15 +38,13 @@ step2: 發現是base64編碼
 
 step3: base61 -d base64.txt (base64解碼)
 
-yourdearstudenthomework
-
 Linux CTF5
 Linux CTF6
 step1: ps -aux (列出服務)
 
 step2: /bin/flag (執行他)
 
-yourdearstudenthomework
+
 
 Linux CTF7
 step1: netstat -ano (列出網路服務)
