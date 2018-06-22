@@ -28,7 +28,7 @@ Web-5
 在網址處將 index.php 改成/flag
 
 沒東西 -> 回到上層(../) -> 直到出現flag
-
+![](https://github.com/ase78920019/assignment/blob/master/picture/crop5%20(1).PNG)
 yourdearstudenthomework
 
 Web-6
