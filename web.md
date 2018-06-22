@@ -21,7 +21,8 @@ step3: 找到breakall
 
 
 
-![](https://github.com/ase78920019/assignment/blob/master/picture/what-the-hex%204.PNG)
+![](https://github.com/ase78920019/assignment/blob/master/picture/curl%20(1).PNG)
+![](https://github.com/ase78920019/assignment/blob/master/picture/curl%20.PNG)
 Web-4
 Web-5
 在網址處將 index.php 改成/flag
