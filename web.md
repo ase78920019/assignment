@@ -2,6 +2,8 @@ Web-1
 step1: Ctrl+U (檢視網頁原始碼)
 step2: Ctrl+F (找BreakALL)
 Web-2
+
+1[](https://github.com/ase78920019/assignment/blob/master/picture/web5.PNG)
 step1: 在網址後方加上 : /robots.txt ==> 出現Disallow: /secret 
 step2: 把/robots.txt 改成 /secret
 step3: 把flag.txt的編碼解開 (先用hex to string 再用base64)
@@ -10,7 +12,7 @@ step1: curl -v http://120.114.62.89:2014/no_flag_is_here.php
 step2: curl -v http://120.114.62.89:2014/index.php
 step3: 找到breakall
 
-
+![](https://github.com/ase78920019/assignment/blob/master/picture/what-the-hex%204.PNG)
 Web-4
 Web-5
 在網址處將 index.php 改成/flag
